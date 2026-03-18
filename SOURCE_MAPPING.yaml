@@ -48,10 +48,6 @@ rules:
     original_url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml
     source: blackmatrix7/ios_rule_script
 
-  - local_file: GlobalMedia.yaml
-    original_url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml
-    source: blackmatrix7/ios_rule_script
-
   - local_file: Google.yaml
     original_url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml
     source: blackmatrix7/ios_rule_script
@@ -72,9 +68,10 @@ rules:
     original_url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Netflix/Netflix.yaml
     source: blackmatrix7/ios_rule_script
 
-  - local_file: OpenAi.yaml
+  - local_file: AI.yaml
     original_url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml
     source: blackmatrix7/ios_rule_script
+    note: 合并了 OpenAI、Copilot、Groq、Together、Cursor、Meta AI、Mistral、Perplexity、xAI 等规则
 
   - local_file: PayPal.yaml
     original_url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/PayPal/PayPal.yaml
