@@ -18,6 +18,7 @@ class RuleMapping:
     source: str
     mode: str = "mirror"
     builder: str | None = None
+    append_file: str | None = None
     note: str | None = None
 
     @classmethod
@@ -31,6 +32,7 @@ class RuleMapping:
             source=data["source"],
             mode=data.get("mode", "mirror"),
             builder=data.get("builder"),
+            append_file=data.get("append_file"),
             note=data.get("note"),
         )
 

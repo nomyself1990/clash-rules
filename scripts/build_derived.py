@@ -30,15 +30,15 @@ def main() -> int:
     for rule in rules:
         if rule.mode != "derived":
             continue
-        if rule.builder != "ai":
+        if rule.builder != "append":
             raise ValueError(f"{rule.local_file}: unsupported builder {rule.builder}")
 
-        content = build_ai_rule(rule, repo_root)
+        content = build_append_rule(rule, repo_root)
         target = repo_root / rule.local_file
         changed = write_if_changed(target, content, dry_run=args.dry_run)
         if changed:
             updated += 1
-            print(f"built {rule.local_file} with builder=ai")
+            print(f"built {rule.local_file} with builder=append")
         else:
             skipped += 1
             print(f"unchanged {rule.local_file}")
@@ -47,11 +47,12 @@ def main() -> int:
     return 0
 
 
-def build_ai_rule(rule, repo_root: Path) -> str:
+def build_append_rule(rule, repo_root: Path) -> str:
     upstream = normalize_text(download_text(rule.original_url))
     validate_rule_payload(upstream, f"{rule.local_file} upstream")
 
-    extras_path = repo_root / "derived" / "AI.append.yaml"
+    append_file = rule.append_file or f"derived/{Path(rule.local_file).stem}.append.yaml"
+    extras_path = repo_root / append_file
     extras = normalize_text(read_text(extras_path)).strip("\n")
     if "payload:" in extras:
         raise ValueError(f"{extras_path}: payload key is not allowed in append fragment")
