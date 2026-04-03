@@ -1,0 +1,28 @@
+  # --- GitHub Copilot (Microsoft) ---
+  - DOMAIN,api.githubcopilot.com
+  - DOMAIN,copilot-proxy.githubusercontent.com
+  - DOMAIN-SUFFIX,copilot.cloud.microsoft
+  - DOMAIN-SUFFIX,copilot.microsoft.com
+
+  # --- Groq ---
+  - DOMAIN,api.groq.com
+  - DOMAIN,console.groq.com
+
+  # --- Together AI ---
+  - DOMAIN,api.together.xyz
+
+  # --- Cursor ---
+  - DOMAIN-SUFFIX,cursor.com
+  - DOMAIN-SUFFIX,cursor.sh
+
+  # --- Meta AI ---
+  - DOMAIN-SUFFIX,meta.ai
+
+  # --- Mistral AI ---
+  - DOMAIN-SUFFIX,mistral.ai
+
+  # --- Perplexity ---
+  - DOMAIN-SUFFIX,perplexity.ai
+
+  # --- xAI (Grok) ---
+  - DOMAIN-SUFFIX,x.ai
